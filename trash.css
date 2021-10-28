@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+svg path{
+    fill: #00394f;
+    stroke: #eee;
+    stroke-width: .25;
+}
+
+svg path:hover{
+    fill: #006284;
+    transition: .6s;
+    cursor: pointer;
+}
+
+
+.red{
+    fill:red;
+}
+.orange{
+    fill: orange;
+}
+.yellow{
+    fill: yellow
+}
+.greenyellow{
+    fill: yellowgreen;
+}
+.green{
+    fill:green;
+}
+
+.green{
+    fill: ind
+}

@@ -1,0 +1,186 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script> 
+
+var url= "https://api.covid19api.com/summary"  
+const list = []
+$.get(url,function(data){
+for (var i= 0; i <192; i++){
+    var fff= (data.Countries[i].Country).toLocaleString()
+    
+    var eee= (data.Countries[i].TotalDeaths).toLocaleString()
+    var formatted = eee.replace(',','')
+    var formatted1= formatted.replace(",","")
+    var converted = parseFloat(formatted1)
+    
+    list.push(converted)
+}
+
+sortedList= (list.sort((a,b) => {
+    if(a > b) return 1;
+    if(a < b) return -1;
+    return 0;
+}))
+console.log(sortedList)
+
+var divide30 = (sortedList[191])/30
+console.log(divide30)
+
+
+
+
+/*MAKING THE X AXIS*/
+var mets= 0
+var listxxx= []
+for (var o=0;o<30;o++){
+    listxxx.push(mets)
+    mets=+mets+divide30
+}
+console.log(listxxx)
+
+/*MAKING THE Y AXIS- THE COUNT OF ...*/
+var list_1=[]
+var list_2=[]
+var list_3=[]
+var list_4=[]
+var list_5=[]
+var list_6=[]
+var list_7=[]
+var list_8=[]
+var list_9=[]
+var list_10=[]
+var list_11=[]
+var list_12=[]
+var list_13=[]
+var list_14=[]
+var list_15=[]
+var list_16=[]
+var list_17=[]
+var list_18=[]
+var list_19=[]
+var list_20=[]
+var list_21=[]
+var list_22=[]
+var list_23=[]
+var list_24=[]
+var list_25=[]
+var list_26=[]
+var list_27=[]
+var list_28=[]
+var list_29=[]
+var list_30=[]
+
+
+sortedList.forEach(function(x){
+    if (x < listxxx[1]){
+        list_1.push(x)
+    }
+    else if (x < listxxx[2]){
+        list_2.push(x)
+    }
+    else if (x < listxxx[3]){
+        list_3.push(x)
+    }
+    else if (x < listxxx[4]){
+        list_4.push(x)
+    }
+    else if (x < listxxx[5]){
+        list_5.push(x)
+    }
+    else if (x < listxxx[6]){
+        list_6.push(x)
+    }
+    else if (x < listxxx[7]){
+        list_7.push(x)
+    }
+    else if (x < listxxx[8]){
+        list_8.push(x)
+    }
+    else if (x < listxxx[9]){
+        list_9.push(x)
+    }
+    else if (x < listxxx[10]){
+        list_10.push(x)
+    }
+    else if (x < listxxx[11]){
+        list_11.push(x)
+    }
+    else if (x < listxxx[12]){
+        list_12.push(x)
+    }
+    else if (x < listxxx[13]){
+        list_13.push(x)
+    }
+    else if (x < listxxx[14]){
+        list_14.push(x)
+    }
+    else if (x < listxxx[15]){
+        list_15.push(x)
+    }
+    else if (x < listxxx[16]){
+        list_16.push(x)
+    }
+    else if (x < listxxx[17]){
+        list_17.push(x)
+    }
+    else if (x < listxxx[18]){
+        list_18.push(x)
+    }
+    else if (x < listxxx[19]){
+        list_19.push(x)
+    }
+    else if (x < listxxx[20]){
+        list_20.push(x)
+    }
+    else if (x < listxxx[21]){
+        list_21.push(x)
+    }
+    else if (x < listxxx[22]){
+        list_22.push(x)
+    }
+    else if (x < listxxx[23]){
+        list_23.push(x)
+    }
+    else if (x < listxxx[24]){
+        list_24.push(x)
+    }
+    else if (x < listxxx[25]){
+        list_25.push(x)
+    }
+    else if (x < listxxx[26]){
+        list_26.push(x)
+    }
+    else if (x < listxxx[27]){
+        list_27.push(x)
+    }
+    else if (x < listxxx[28]){
+        list_28.push(x)
+    }
+    else if (x < listxxx[29]){
+        list_29.push(x)
+    }
+    else if (x > listxxx[29]){
+        list_30.push(x)
+    }
+})
+
+var yAxis= [list_1.length,list_2.length,list_3.length,list_4.length,list_5.length,list_6.length,
+list_7.length,list_8.length,list_9.length,list_10.length,list_11.length,list_12.length,
+list_13.length,list_14.length,list_15.length,list_16.length,list_17.length,list_18.length,
+list_19.length,list_20.length,list_21.length,list_22.length,list_23.length,list_24.length,
+list_25.length,list_26.length,list_27.length,list_28.length,list_29.length,list_30.length]
+
+
+console.log(yAxis)
+
+
+}        
+)
+
+
+
+
+
+
+</script>
+

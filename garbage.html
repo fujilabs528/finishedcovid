@@ -1,0 +1,34 @@
+<script>
+var url= "https://api.covid19api.com/summary" 
+var list = [] 
+$.get(url,function(data){
+    for (var i= 0; i <192; i++){
+  
+        var zzz = `
+        ${(data.Countries[i].TotalConfirmed).toLocaleString()}
+                    ` 
+        var formatted = zzz.replace(',','')
+        var formatted1= formatted.replace(",","")
+        var converted = parseFloat(formatted1)
+        
+        var ccc = `
+        ${(data.Countries[i].TotalDeaths).toLocaleString()}
+            `   
+        var formatted = ccc.replace(',','')
+        var formatted1= formatted.replace(",","")
+        var converted1 = parseFloat(formatted1)
+
+        var fff= (converted1 / converted)
+        var vvv= (fff*100).toFixed(2)
+
+        list.push(vvv)
+    }
+    console.log(list.sort())
+}
+)
+                        
+/* ----- MORTALITY RATE DISTRIBUTION list divide by 30, count of each stack into build chart ------ */
+
+
+    
+</script>

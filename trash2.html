@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="trashxxx.css" type="text/css"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h1> hello </h1>
+        <canvas id="chart" width="250" height="200"></canvas>
+
+
+<script>
+var jjj= [0,
+24719.4
+,49438.8
+,74158.20000000001
+,98877.6
+,23597
+,48316.4,
+173035.8] 
+var canvasElement= document.getElementById("chart")
+var config = {
+    type: "bar",
+    data: {labels: jjj, datasets: [
+        {
+            label: "Number", 
+            data: jjj,
+            backgroundColor: ["yellow","red","orange"],
+            borderColor: ["black","white","grey"],
+            borderWidth: 1,
+        }] }
+}
+
+var newChart = new Chart(canvasElement, config)
+
+</script>
+
+    </body>
+    </html>
